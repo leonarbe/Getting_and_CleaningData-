@@ -7,6 +7,6 @@ There are two folders that contain the files used by the program "run_analysis.R
 
 - "./train"
 
-There's a Cookbook.md that contains info about the variables used on this project
+There's a Cookbook.md that contains info about the variables and files used on this project
 
 The  R program file "run_analysis.R"
