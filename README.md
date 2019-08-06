@@ -2,8 +2,10 @@
 Getting and Cleaning Data  - Week 4 - Certificate Data Science Johns Hopkins University
 
 There are two folders that contain the files used by the program "run_analysis.R"
-./temp
-./train
+
+- "./temp"
+
+- "./train"
 
 There's a Cookbook.md that contains info about the variables used on this project
 
