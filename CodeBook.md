@@ -77,3 +77,11 @@ this dataframe will contain both test and train activitiies (labels
 
 ### Subject_merged: 
 this dataframe will contain both test and train Subjects
+
+# Information about Train and test data files, 
+
+## Information about the features is included in the file "features.txt".
+
+## Information about the datasets
+Detail information about the source files is provided here:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#
