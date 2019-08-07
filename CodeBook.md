@@ -30,6 +30,8 @@ library(stringr)
 2. y_train.txt
 3. subject_train.txt
 
+* Summary file:
+1. Summary_Avrg_Feat_Activities_Subject.txt
 
 ## Tidy Data Set description
 
