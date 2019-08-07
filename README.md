@@ -1,10 +1,14 @@
 # Getting_and_CleaningData-
 Getting and Cleaning Data  - Week 4 - Certificate Data Science Johns Hopkins University
 
+## Assignment-README.txt
+
+Details about this assigment can be found on this file
+
 ##  Cookbook.md
 Contains info about the variables and files used on this project
 
-### run_analysis.R
+## run_analysis.R
 The  R program file performs the following:
 1. Merges the training and the test sets to create one data set. (See Zip file "X_merged.zip")
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
