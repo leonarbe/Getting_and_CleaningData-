@@ -75,13 +75,3 @@ this dataframe will contain both test and train activitiies (labels
 
 ### Subject_merged: 
 this dataframe will contain both test and train Subjects
-
-
-# variable name
-
-
-
-## Transformations performed
-
-
-
