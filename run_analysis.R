@@ -36,6 +36,11 @@ Subject_test <- tbl_df(read.csv2('.\\Subject_test.txt', sep = "" , header = FALS
 # for X_test and X_train data frames
 X_Feat <- read.csv2('.\\features.txt', sep = "", header = FALSE)
 
+# replace beginning of variable names
+# Set ambiguos variable names to meaningful names, e.g. what begins with "t, replace it with "time"
+X_Feat[,2]<-gsub("^t","time_", X_Feat[,2])
+X_Feat[,2]<-gsub("^f","freq_", X_Feat[,2])
+
 # In order to avoid column name duplication, I'll add the ID at the beginning of the
 # variable name
 X_Features <- paste(X_Feat[,1],X_Feat[,2], sep = "_")
@@ -54,6 +59,7 @@ X_Features<-gsub("\\)","", X_Features)
 
 # Set all feature names to lower case
 X_Features <- tolower(X_Features)
+
 
 # Merge files
 
