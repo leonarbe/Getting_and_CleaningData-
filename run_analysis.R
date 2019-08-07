@@ -10,7 +10,6 @@ library(dplyr)
 # For string manipulation on this script
 library(stringr)
 
-
 # Read source files
 # Assume "train" and "test" folders are one level down from where this script is located
 
@@ -98,6 +97,10 @@ names(Extracted_Mean_Std)[ncol(Extracted_Mean_Std)] <- "activity"
 Summary_Avrg_Feat_Activities_Subject <- Extracted_Mean_Std %>%
   group_by(subject_id, activity) %>%
   summarize_all(funs(mean))
+
+# Create physical Summary_Avrg_Feat_Activities_Subject.txt file from dataframe
+write.table(Summary_Avrg_Feat_Activities_Subject, "Summary_Avrg_Feat_Activities_Subject.txt",  row.names = FALSE)
+
   
 
 
