@@ -23,21 +23,21 @@ Activities <- mutate(Activities, V1 = as.integer(V1))
 
 # Read Train files and directly Convert to 'data frame tbl'
 
-X_train <- tbl_df(read.csv2('.\\train\\X_train.txt', sep = "", header = FALSE , stringsAsFactors = FALSE))
-Y_train <- tbl_df(read.csv2('.\\train\\Y_train.txt', sep = "", header = FALSE ))
-Subject_train <- tbl_df(read.csv2('.\\train\\Subject_train.txt', sep = "" , header = FALSE))
+X_train <- tbl_df(read.csv2('.\\X_train.txt', sep = "", header = FALSE , stringsAsFactors = FALSE))
+Y_train <- tbl_df(read.csv2('.\\Y_train.txt', sep = "", header = FALSE ))
+Subject_train <- tbl_df(read.csv2('.\\Subject_train.txt', sep = "" , header = FALSE))
 
 # Read Test files and directly Convert  to 'data frame tbl'
 
-X_test <- tbl_df(read.csv2('.\\test\\X_test.txt', sep = "", header = FALSE ))
-Y_test <- tbl_df(read.csv2('.\\test\\Y_test.txt', sep = "" , header = FALSE))
-Subject_test <- tbl_df(read.csv2('.\\test\\Subject_test.txt', sep = "" , header = FALSE))
+X_test <- tbl_df(read.csv2('.\\X_test.txt', sep = "", header = FALSE ))
+Y_test <- tbl_df(read.csv2('.\\Y_test.txt', sep = "" , header = FALSE))
+Subject_test <- tbl_df(read.csv2('.\\Subject_test.txt', sep = "" , header = FALSE))
 
 # load Column names as a vector to be used later to apply for meaningful variable names 
 # for X_test and X_train data frames
 X_Feat <- read.csv2('.\\features.txt', sep = "", header = FALSE)
 
-# In order to avoid column name dplication, I'll add the ID at the beginning of the
+# In order to avoid column name duplication, I'll add the ID at the beginning of the
 # variable name
 X_Features <- paste(X_Feat[,1],X_Feat[,2], sep = "_")
 
@@ -78,8 +78,6 @@ Y_merged <- merge(Y_merged, Activities, by.x = "V1", by.y = "V1")
 # Leave only the activity name
 Y_merged <- Y_merged[,2]
 
-# Create a new matrix that will add the activities  both features and labels ( Activities)
-Measures_Activities <- cbind(X_merged,Y_merged)
 
 # New Dataframe with Extracted features containing the words "mean" and "std" 
 # in column name of the data frame
