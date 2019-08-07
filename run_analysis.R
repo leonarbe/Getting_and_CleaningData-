@@ -71,6 +71,10 @@ for(i in 1:ncol(X_merged)){
   names(X_merged)[i] <- as.character(X_Features[i])
 }
 
+# Create physical merged dataframe file of test and training sets of data
+X_merged <- tbl_df(sapply(X_merged,as.numeric))
+write.table(X_merged, "X_merged.txt",  row.names = FALSE)
+
 # Add column with meaninful names for activities instead of numerals,
 # e.g. 1 = 'walking'
 Y_merged <- merge(Y_merged, Activities, by.x = "V1", by.y = "V1")
